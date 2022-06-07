@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url(./arid-gf2c6658c8_1280.jpg);
+
+        }
+        div{
+            border:solid black 1px;
+        }
+        div.body{
+            margin-left: 30%;
+            width:100px;
+            height:200px;
+            border-radius: 5px;
+            border-right: solid black 8px;
+            border-left: solid black 8px;
+            background-color: olive;
+            position: relative;
+            animation-name: boddy;
+            animation-duration: 10s;
+            box-shadow: 5px 5px 5px 10px rgb(97, 97, 1) inset;
+        }
+        div.gun{
+            width:13px;
+            height:80px;
+            background-color: olive;
+            margin-left:41%;
+            border: solid black 3px;
+        }
+        div.top{
+            width:80px;
+            height:80px;
+            border: solid black 3px;
+            border-radius: 50%;
+            background-color: olivedrab;
+            text-align: center;
+            font-size: 2rem;
+            color:white;
+            box-shadow: 0px 0px 10px 10px rgb(88, 117, 29) inset;
+        }
+        div.wrapy{
+            margin-top:50%;
+            border: none;
+            transform: rotate(30deg);
+            height: 80px;
+            animation-name: gunny;
+            animation-duration: 10s;
+
+        }
+        #boomy{
+            position:relative;
+            top:100px;
+            left:510px;
+            width:170px;
+            height:170px;
+            animation-name:boom;
+            animation-duration: 10s;
+        }
+        #missle{
+            position:absolute;
+            top:170px;
+            left:565px;
+            width:30px;
+            height:60px;
+            background-color: black;
+            outline:solid white 2px;
+            /* transform:rotate(180deg); */
+            border-top-left-radius: 25px ;
+            border-top-right-radius: 25px ;
+            animation-name:missle;
+            animation-duration: 10s;
+
+        }
+            
+
+        @keyframes boddy{
+        0%{top:0px;left:0px;transform: rotate(0deg);}
+        25%{top:100px;left:50px;transform: rotate(-45deg)}
+        50%{top:400px;left:400px}
+        75%{top:0px;left:0px}
+        98%{top:0px;left:0px;animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);transform:scale(1.0);}
+        99%{transform:scale(1.5);}
+        100%{top:0px;transform:scale(1.0)translateX(-50px);}
+
+        }
+        @keyframes gunny{
+        0%{transform:rotate(0deg)}
+        25%{transform:rotate(90deg)}
+        50%{transform:rotate(-100deg)}
+        75%{transform:rotate(50deg)}
+        98%{transform:rotate(0deg)}
+        100%{transform:rotate(0deg);transform:translateX(-510px);}
+        }
+       
+        @keyframes boom {
+        0%{visibility: hidden;}
+        98%{visibility: hidden;}
+        99%{display:visible}
+        100%{display:hidden;}
+        }
+        
+        @keyframes missle {
+        0%{top:1000px;right:1000px;}
+        70%{top:1000px;right:1000px}
+        100%{top:170px;right:0px}
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <div id="missle"></div>
+    <img src="./boom-emoji-by-google.png" alt="" id="boomy">
+    <div class="body">
+        <div class="wrapy"><div class="top">Z</div><div class="gun"></div></div>
+    </div>
+    
+    
+</body>
+</html>
